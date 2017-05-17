@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+ 
+    <appender name="CONSOLE" class="LoggerAppenderConsole">
+    	<layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{D M d, Y H:i:s.u e O} [%-5level] %logger %msg%n" />
+        </layout>
+    </appender>
+
+    <appender name="PRINT_TO_ECHO" class="LoggerAppenderEcho">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{D M d, Y H:i:s.u e O} [%-5level] %logger %msg%n" />
+        </layout>
+    </appender>
+
+    <root>
+        <level value="INFO" />
+        <appender_ref ref="PRINT_TO_ECHO" />
+    </root>
+    <root>
+        <level value="WARN" />
+        <appender_ref ref="PRINT_TO_ECHO" />
+    </root>
+    <root>
+        <level value="FATAL" />
+        <appender_ref ref="PRINT_TO_ECHO" />
+    </root>
+    <root>
+        <level value="ERROR" />
+        <appender_ref ref="PRINT_TO_ECHO" />
+    </root>
+    <root>
+        <level value="DEBUG" />
+        <appender_ref ref="PRINT_TO_ECHO" />
+    </root>
+</configuration>
